@@ -2,6 +2,7 @@ package com.firejq.websocket.handler;
 
 import ch.qos.logback.core.db.dialect.SybaseSqlAnywhereDialect;
 import com.google.gson.GsonBuilder;
+import com.sun.org.apache.xml.internal.security.utils.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.socket.*;
 
@@ -26,7 +27,6 @@ public class MessageHandler implements WebSocketHandler {
 		//TODO 完善心跳检测方案 此处只是测试
 		//TODO 进度：客户端主动发ping的话不完善（如果客户端收不到回复，如何处理），服务端主动发ping的还没做
 //		this.sendPingMessage(webSocketSession);
-
 		//加入连接队列
 		sessions.add(webSocketSession);
 		//		System.out.println(webSocketSession);

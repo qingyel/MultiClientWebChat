@@ -7,6 +7,12 @@
     <version>1.0-SNAPSHOT</version>
     <name>MultiClientWebChat Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <repositories>
+        <repository>
+            <id>Central Repository</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -43,10 +49,16 @@
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.zaxxer</groupId>-->
+<!--            <artifactId>HikariCP</artifactId>-->
+<!--            <version>2.6.0</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>2.6.0</version>
+            <version>3.2.0</version>
         </dependency>
 
         <!-- DAO层依赖 -->
@@ -71,6 +83,9 @@
             <artifactId>jstl-api</artifactId>
             <version>1.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api -->
+
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -162,10 +177,17 @@
             <version>4.3.10.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>com.opsbears.webcomponents.application.slf4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.0.0-alpha14</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+
 
 
     </dependencies>
